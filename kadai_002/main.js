@@ -97,7 +97,7 @@ const gameOver = id => {
   // タイムアップを表示
   document.getElementById('wrap').innerHTML = '<span style="color: red; font-size: 2em;">タイムアップ！</span>';
 
-  setTimeour(() => {
+  setTimeout(() => {
     const result = confirm(rankCheck(score));
 
     // OKボタンをクリックされたらリロードする
@@ -105,7 +105,6 @@ const gameOver = id => {
         window.location.reload();
   }
   }, 1000)
-
 };
 
 // カウントダウンタイマー
